@@ -1,0 +1,11 @@
+image: node:16
+definitions:
+  steps:
+    - step: &install-ardupilot
+        name: Install ardupilot
+        script:
+          - bash ./ardupilot_installation/install_ardupilot-ubuntu.sh
+
+pipelines:
+  default:
+     - step: *install-ardupilot
